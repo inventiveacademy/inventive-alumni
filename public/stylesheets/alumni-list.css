@@ -1,0 +1,202 @@
+/* side bar options */
+
+.MainContainer {
+    display: flex;
+}
+
+.SideBar {
+    width: 25%;
+    display: inline-block;
+    margin-top: 45px;
+    margin-left: 130px;
+}
+
+.SelectionContainer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.TypeName {
+    display: block;
+    margin-bottom: .5em;
+    cursor: pointer;
+    border: none;
+}
+
+.TypeName p {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.TypeName i {
+    float: right;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+.OpenTag {
+    background-color: black;
+    color: white;
+}
+
+.ClosedTag {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.ClosedTag p {
+    color: black;
+}
+
+.SelectionOptions {
+    padding: .2em .9em;
+}
+
+.InputName {
+    box-sizing: border-box;
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+    flex: 0 0 auto;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+/* Profile list */
+
+.ProfileList {
+    width: 60%;
+    display: inline-block;
+    margin-left: 1.6%;
+    margin-top: 45px;
+    flex-wrap: auto;
+}
+
+.filterNote {
+    width: 500px;
+    margin-left: 67px;
+    font-weight: bold;
+}
+
+.Showing {
+    width: 500px;
+    margin-left: 67px;
+}
+
+.Showing p {
+    font-family: "Circular", Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.card {
+    width: 77%;
+    height: 300px;
+    margin-left: 67px;
+    margin-bottom:50px;
+}
+.CardLink {
+    display: block;
+    margin-bottom: 4.5em;
+}
+
+.CardLink:hover {
+    text-decoration: none;
+}
+
+.LinkContent {
+    transition: all 0.3s ease-in-out;
+    background: white;
+    border: 1px solid #dadada;
+    cursor: pointer;
+    box-shadow: 0 2px #dadada;
+    position: relative;
+}
+
+.LinkContent:hover {
+    border: 1px solid #62C7FF;
+    box-shadow: 0 0px #dadada;
+}
+
+.CardImg {
+    border-radius: 100%;
+    background: #fef8e2;
+    height: 90px;
+    left: -46px;
+    margin-top: 25px;
+    position: absolute;
+    width: 90px;
+    z-index: 1;
+}
+
+.CardInnerContent {
+    overflow: hidden;
+    padding: 25px 25px 25px 65px;
+    position: relative;
+}
+
+.CardNameOrgin {
+    display: flex;
+    justify-content: space-around
+}
+
+.CardRightCorner {
+    font-size: 32px;
+    margin: 0;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Name {
+    text-transform: uppercase;
+    color: black;
+    margin: 0;
+    width: 75%;
+}
+
+.Orgin {
+    color: #c3c3c3;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.CardMainSkills {
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.CardAchievements {
+    margin-top: 15px;
+}
+
+.Achievement {
+    color: black;
+}
+
+.CardSkills {
+    border-top: 1px solid #dadada;
+    margin-top: 8px;
+    padding: 8px 0 0 0;
+    list-style: square;
+    list-style-position: outside;
+}
+
+.SkillItem {
+    border-width: 0;
+    display: inline-block;
+    margin: 5px 2px 0 0;
+    background: #fbd334;
+    color: black;
+    padding: 7.6px 3.8px;
+    margin: 5px 1px 5px 1px;
+    border-radius: 5px;
+}

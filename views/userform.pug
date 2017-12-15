@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .SignUpContent
+        h3.bold Sign Up    
+        form(method="POST")
+            label.signUpLabel(for="firstname") First Name
+            br
+            input.signUpInput2(id="firstname" placeholder="First Name")
+            input.signUpInput2(id="lastname" placeholder="Last Name")
+            div.form-group
+                label.signUpLabel(for="email") Email
+                br
+                input.signUpInput(id="email" placeholder="Email")
+            div.form-group
+                label.signUpLabel(for="password") Password
+                br
+                input.signUpInput(id="password" type="password" placeholder="Your Password")
+            div.form-group
+                label.signUpLabel(for="confirmPassword") Password confirmation
+                br
+                input.signUpInput(id="confirmPassword" type="password" placeholder="Confirm your Password")
+            div.form-group
