@@ -1,8 +1,7 @@
 {
   "name": "inventive-alumni",
   "version": "1.0.0",
-  "description":
-    "Inventive Alumni site for graduates of Inventive Academy to look for work",
+  "description": "Inventive Alumni site for graduates of Inventive Academy to look for work",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all  --parallel security-check open:src",
