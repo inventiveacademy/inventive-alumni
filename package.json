@@ -1,8 +1,7 @@
 {
-  "name": "inventive-alumni",
+  "name": "js-dev-env",
   "version": "1.0.0",
-  "description":
-    "Inventive Alumni site for graduates of Inventive Academy to look for work",
+  "description": "Javascript Dev Environment",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start":
@@ -17,7 +16,7 @@
       "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Sean Baier",
+  "author": "Corey House",
   "license": "MIT",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
