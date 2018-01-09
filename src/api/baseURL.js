@@ -1,7 +1,7 @@
 export default function getBaseURL() {
   return getQueryStringParameterByName('useMockApi')
     ? 'http://localhost:3001'
-    : '/';
+    : 'https://js-dev-demo-api.herokuapp.com/';
   // const inDevelopment = window.location.hostname === 'localhost';
   // return inDevelopment ? 'http://localhost:3001/' : '/';
 }
