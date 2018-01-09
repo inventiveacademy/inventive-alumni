@@ -2,31 +2,25 @@ import express from 'express';
 import path from 'path';
 import open from 'open';
 import chalk from 'chalk';
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
+import compression from 'compression';
 
 /* eslint-disable no-console */
 const port = 3000;
 const app = express();
-const compiler = webpack(config);
 
-app.use(
-  require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-  })
-);
+app.use(compression());
+app.use(express.static('dist'));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.get('/users', function(req, res) {
   // Hard coding for simplicity pretend this hits a real database
   res.json([
-    { id: 1, firstName: 'Bob', lastName: 'Smith', email: 'bob@gmail.com' },
-    { id: 1, firstName: 'Joe', lastName: 'Shmo', email: 'bob@gmail.com' },
-    { id: 1, firstName: 'Samone', lastName: 'Boyd', email: 'bob@gmail.com' }
+    { id: 1, fname: 'Bob', lname: 'Smith', email: 'bob@gmail.com' },
+    { id: 1, fname: 'Joe', lname: 'Shmo', email: 'bob@gmail.com' },
+    { id: 1, fname: 'Samone', lname: 'Boyd', email: 'bob@gmail.com' }
   ]);
 });
 
