@@ -18,9 +18,9 @@ app.get('/', function(req, res) {
 app.get('/users', function(req, res) {
   // Hard coding for simplicity pretend this hits a real database
   res.json([
-    { id: 1, fname: 'Bob', lname: 'Smith', email: 'bob@gmail.com' },
-    { id: 1, fname: 'Joe', lname: 'Shmo', email: 'bob@gmail.com' },
-    { id: 1, fname: 'Samone', lname: 'Boyd', email: 'bob@gmail.com' }
+    { id: 1, firstName: 'Bob', lastName: 'Smith', email: 'bob@gmail.com' },
+    { id: 1, firstName: 'Joe', lastName: 'Shmo', email: 'bob@gmail.com' },
+    { id: 1, firstName: 'Samone', lastName: 'Boyd', email: 'bob@gmail.com' }
   ]);
 });
 
