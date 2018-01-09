@@ -1,39 +1,42 @@
-// /* eslint-disable no-console */
-// import webpack from 'webpack';
-// import webpackConfig from '../webpack.config.prod';
-// import chalk from 'chalk';
+/* eslint-disable no-console */
+import webpack from 'webpack';
+import webpackConfig from '../webpack.config.prod';
+import chalk from 'chalk';
 
-// process.env.NODE_ENV = 'production';
-// console.log(
-//   chalk.blue(
-//     'Generating minified bundle for production. This will take a moment...'
-//   )
-// );
+process.env.NODE_ENV = 'production';
 
-// webpack(webpackConfig).run((err, stats) => {
-//   if (err) {
-//     // so a fatal error occurred. Stop Here
-//     console.log(chalk.red(err));
-//     return 1;
-//   }
+console.log(
+  chalk.blue(
+    'Generating minified bundle for production. This will take a moment...'
+  )
+);
 
-//   const jsonStats = stats.Json();
+webpack(webpackConfig).run((err, stats) => {
+  if (err) {
+    // so a fatal error occurred. Stop Here
+    console.log(chalk.red(err));
+    return 1;
+  }
 
-//   if (jsonStats.hasErrors) {
-//     return json.jsonStats.errors.map(error => console.log(chalk.red(error)));
-//   }
+  const jsonStats = stats.toJson();
 
-//   if (jsonStats.hasWarnings) {
-//     console.log(chalk.yellow('Webpack generated the following warnings: '));
-//     jsonStats.warnings.map(warning => console.log(chalk.yellow(warning)));
-//   }
+  if (jsonStats.hasErrors) {
+    return jsonStats.jsonStats.errors.map(error =>
+      console.log(chalk.red(error))
+    );
+  }
 
-//   console.log(`Webpack stats: ${stats}`);
+  if (jsonStats.hasWarnings) {
+    console.log(chalk.yellow('Webpack generated the following warnings: '));
+    jsonStats.warnings.map(warning => console.log(chalk.yellow(warning)));
+  }
 
-//   // if we got this far, the build succeeded.
-//   console.log(
-//     chalk.green('Your app has been built for production and written to /dist')
-//   );
+  console.log(`Webpack stats: ${stats}`);
 
-//   return 0;
-// });
+  // if we got this far, the build succeeded.
+  console.log(
+    chalk.green('Your app has been built for production and written to /dist')
+  );
+
+  return 0;
+});
