@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "pug": "^2.0.0-rc.4",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {

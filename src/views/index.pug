@@ -1,0 +1,115 @@
+extends layout
+
+block content
+    .MainContainer
+        .SideBar
+            .SelectionContainer
+                .SelectionType
+                    .TypeName.OpenTag#Type1
+                       p Job Role 
+                       i(class="fa fa-minus one" aria-hidden="true fa-small")
+                    .SelectionOptions#Selection1
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Web Developer
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Android Developer
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName iOS Developer
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName UX Designer
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Data Scientist
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Data Analyst
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Product Manager
+                    .SelectionOptionEnd
+                .SelectionType
+                    .TypeName.OpenTag#Type2
+                        p Seeking
+                        i(class="fa fa-minus two" aria-hidden="true fa-small")
+                    .SelectionOptions#Selection2
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Full Time
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Freelance
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Apprentice
+                .SelectionType
+                    .TypeName.OpenTag#Type3
+                        p Location
+                        i(class="fa fa-minus three" aria-hidden="true fa-small")
+                    .SelectionOptions#Selection3
+                       div
+                           input.SelectOption(type="search" placeholder="search for a location")
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Show alumni willing to relocate
+                .SelectionTag
+                    .TypeName.OpenTag#Type4
+                        p GA Course History
+                        i(class="fa fa-minus four" aria-hidden="true fa-small")
+                    .SelectionOptions#Selection4
+                       div
+                           input.SelectOption(type="select" placeholder="select...")
+                       div
+                           input.SelectOption(type="checkbox")
+                           lable.InputName Need Update
+                .SelectionType
+                    .TypeName.OpenTag#Type5
+                        p Skills
+                        i(class="fa fa-minus five" aria-hidden="true fa-small")
+                    .SelectionOptions#Selection5
+                       div
+                           input.SelectOption(type="search" placeholder="Search or select...")
+                .SelectionOptions
+                   .loneOption
+                       input.SelectOption(type="checkbox")
+                       lable.InputName Show alumni not looking for work       
+        .ProfileList
+            div
+                div
+                    p.filterNote No active filters, displaying all results
+                    div.Showing
+                        p Showing  1-20 of  1472
+            
+
+            -for(i=0; i < 3; i++)
+                .card
+                    .cardInfo
+                       a.CardLink(href="alumniDetails") 
+                           .LinkContent
+                               img.CardImg(src="images/drake.jpg")
+                               .CardInnerContent
+                                   .CardNameOrgin
+                                       h3.Name Drake Siemer
+                                       .CardRightCorner
+                                           p.Orgin texas 
+                                               i.Orgin-marker(class="fa fa-map-marker" aria-hidden="true fa-small")
+                                   div.CardMainSkills
+                                       p dedicated learner | HardWorker | team player
+                                   div.CardAchievements
+                                       div
+                                           i(class="fa fa-briefcase Achievement" aria-hidden="true fa-small")
+                                           p &nbsp; Where I work
+                                       div
+                                           i(class="fa fa-graduation-cap Achievement" aria-hidden="true fa-small")
+                                           p &nbsp;Where I went for school
+                                   ul.CardSkills
+                                       li.SkillItem HTML
+                                       li.SkillItem Node
+                                       li.SkillItem JavaScript
+                                       li.SkillItem CSS
+                                       li.SkillItem SASS
+                                       li.SkillItem Pug
+                                       li.SkillItem Express
